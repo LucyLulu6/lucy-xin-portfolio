@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000">
+  <rect width="1600" height="1000" fill="#e7d7bf"/><circle cx="1340" cy="110" r="310" fill="#c65e43" opacity=".92"/>
+  <rect x="120" y="115" width="970" height="770" rx="28" fill="#f8f3ea"/><rect x="170" y="170" width="420" height="45" rx="12" fill="#1d211c"/>
+  <rect x="170" y="270" width="360" height="470" rx="18" fill="#b98757"/><path d="M225 670V345h250v325M225 495h250" fill="none" stroke="#f8f3ea" stroke-width="26"/>
+  <rect x="600" y="270" width="400" height="95" rx="18" fill="#e7d7bf"/><rect x="600" y="395" width="400" height="95" rx="18" fill="#d5e0cf"/>
+  <rect x="600" y="520" width="400" height="95" rx="18" fill="#efc787"/><rect x="600" y="650" width="240" height="64" rx="32" fill="#1d211c"/>
+  <text x="1160" y="520" fill="#1d211c" font-family="Arial" font-size="62" font-weight="700">A clearer path</text><text x="1160" y="595" fill="#1d211c" font-family="Arial" font-size="62" font-weight="700">to custom craft.</text>
+  <text x="1160" y="690" fill="#1d211c" font-family="Arial" font-size="25" letter-spacing="4">CASE STUDY COVER · IN PROGRESS</text>
+</svg>

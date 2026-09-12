@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000">
+  <rect width="1600" height="1000" fill="#ff775f"/><path d="M0 730C300 570 500 900 800 710s510-10 800-210v500H0Z" fill="#f4e9cf"/>
+  <rect x="150" y="140" width="370" height="600" rx="42" fill="#fff8ec"/><rect x="185" y="210" width="300" height="270" rx="20" fill="#f5bd25"/>
+  <circle cx="335" cy="345" r="96" fill="#fff8ec"/><path d="M285 345q50-95 100 0q-50 85-100 0" fill="#ff775f"/>
+  <rect x="185" y="530" width="230" height="26" rx="13" fill="#25231f"/><rect x="185" y="580" width="290" height="18" rx="9" fill="#d8cbb5"/><rect x="185" y="620" width="255" height="18" rx="9" fill="#d8cbb5"/>
+  <rect x="650" y="250" width="290" height="490" rx="145" fill="#fff8ec"/><ellipse cx="795" cy="295" rx="125" ry="46" fill="#25231f"/><ellipse cx="795" cy="292" rx="103" ry="31" fill="#f7e3b9"/><circle cx="760" cy="285" r="25" fill="#ff775f"/><circle cx="810" cy="280" r="20" fill="#f5bd25"/>
+  <text x="1040" y="390" fill="#25231f" font-family="Arial" font-size="75" font-weight="700">Discover.</text><text x="1040" y="475" fill="#25231f" font-family="Arial" font-size="75" font-weight="700">Learn.</text><text x="1040" y="560" fill="#25231f" font-family="Arial" font-size="75" font-weight="700">Visit.</text>
+  <text x="1040" y="640" fill="#25231f" font-family="Arial" font-size="25" letter-spacing="4">SOCIAL → PRODUCT → STORE</text>
+</svg>

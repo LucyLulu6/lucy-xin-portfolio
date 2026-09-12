@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#dff5cc"/><stop offset="1" stop-color="#83b96c"/></linearGradient><filter id="s"><feDropShadow dx="0" dy="28" stdDeviation="28" flood-opacity=".2"/></filter></defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <rect x="116" y="96" width="1368" height="808" rx="28" fill="#fff" filter="url(#s)"/>
+  <rect x="116" y="96" width="1368" height="76" rx="28" fill="#f7f9f4"/><circle cx="158" cy="134" r="8" fill="#ff766b"/><circle cx="184" cy="134" r="8" fill="#f6c64b"/><circle cx="210" cy="134" r="8" fill="#83c778"/>
+  <text x="260" y="145" fill="#2e4a2a" font-family="Arial" font-size="22" font-weight="700">iDE Education</text>
+  <text x="1298" y="142" fill="#415c3d" font-family="Arial" font-size="16">Programs</text><text x="1390" y="142" fill="#415c3d" font-family="Arial" font-size="16">About</text>
+  <rect x="162" y="222" width="1268" height="350" rx="24" fill="#eff7e9"/><circle cx="1242" cy="392" r="132" fill="#b6da9d"/><circle cx="1298" cy="340" r="74" fill="#7fae68" opacity=".7"/>
+  <text x="220" y="334" fill="#274324" font-family="Arial" font-size="24" font-weight="700">PERSONALIZED TUTORING</text>
+  <text x="220" y="414" fill="#142512" font-family="Arial" font-size="64" font-weight="700">Learning designed</text><text x="220" y="486" fill="#142512" font-family="Arial" font-size="64" font-weight="700">around every student.</text>
+  <rect x="220" y="520" width="190" height="54" rx="27" fill="#2e5d2b"/><text x="263" y="555" fill="#fff" font-family="Arial" font-size="18">Explore programs</text>
+  <text x="162" y="658" fill="#243522" font-family="Arial" font-size="32" font-weight="700">A clear path from question to confidence</text>
+  <g font-family="Arial"><rect x="162" y="706" width="390" height="142" rx="18" fill="#f6f7f3"/><text x="192" y="752" font-size="18" font-weight="700" fill="#294428">01 · Understand</text><text x="192" y="792" font-size="15" fill="#5d6b5a">Find the right support for each learner.</text><rect x="605" y="706" width="390" height="142" rx="18" fill="#f6f7f3"/><text x="635" y="752" font-size="18" font-weight="700" fill="#294428">02 · Learn</text><text x="635" y="792" font-size="15" fill="#5d6b5a">Build skills with focused guidance.</text><rect x="1048" y="706" width="382" height="142" rx="18" fill="#f6f7f3"/><text x="1078" y="752" font-size="18" font-weight="700" fill="#294428">03 · Grow</text><text x="1078" y="792" font-size="15" fill="#5d6b5a">Turn progress into lasting confidence.</text></g>
+</svg>
