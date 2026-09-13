@@ -400,15 +400,26 @@
     const copy = qs('#audience-copy', section || doc);
     if (!tabs.length || !copy) return;
     const audienceCopy = {
-      anyone: "I’m Lucy — an AI Product Designer who turns complex workflows into clear, controllable, and trustworthy human experiences.",
-      recruiters: "I work across research, product strategy, interaction design, and validation — translating ambiguity into evidence, decisions, and product direction.",
-      'product-designers': "I care about the invisible structure behind an interface: hierarchy, system states, feedback, and the moments that help people understand and guide AI.",
-      designers: "I care about the invisible structure behind an interface: hierarchy, system states, feedback, and the moments that help people understand and guide AI.",
-      teams: "I make complex product decisions visible through workflow maps, prototypes, testable states, and clear documentation that product and engineering teams can act on."
+      en: {
+        anyone: "I’m Lucy — an AI Product Designer who turns complex workflows into clear, controllable, and trustworthy human experiences.",
+        recruiters: "I work across research, product strategy, interaction design, and validation — translating ambiguity into evidence, decisions, and product direction.",
+        'product-designers': "I care about the invisible structure behind an interface: hierarchy, system states, feedback, and the moments that help people understand and guide AI.",
+        designers: "I care about the invisible structure behind an interface: hierarchy, system states, feedback, and the moments that help people understand and guide AI.",
+        teams: "I make complex product decisions visible through workflow maps, prototypes, testable states, and clear documentation that product and engineering teams can act on."
+      },
+      zh: {
+        anyone: '我是 Lucy，一名 AI 产品设计师。我擅长将复杂工作流程梳理成清晰、可控且值得信任的体验。',
+        recruiters: '我贯穿用户研究、产品策略、交互设计与验证，将模糊问题转化为可靠证据、清晰决策与可执行的产品方向。',
+        'product-designers': '我关注界面背后不易被看见的结构：信息层级、系统状态、反馈，以及帮助人们理解并掌控 AI 的关键时刻。',
+        designers: '我关注界面背后不易被看见的结构：信息层级、系统状态、反馈，以及帮助人们理解并掌控 AI 的关键时刻。',
+        teams: '我通过工作流地图、原型、可测试状态与清晰文档，让复杂的产品决策变得可见，帮助产品与工程团队高效推进。'
+      }
     };
 
-    const activate = (tab) => {
+    let transitionTimer = 0;
+    const activate = (tab, immediate = false) => {
       const key = (tab.dataset.audience || tab.textContent || '').trim().toLowerCase().replace(/\s+/g, '-');
+      const language = doc.documentElement.lang.startsWith('zh') ? 'zh' : 'en';
       tabs.forEach((item) => {
         const selected = item === tab;
         item.setAttribute('aria-selected', String(selected));
@@ -416,10 +427,11 @@
         item.tabIndex = selected ? 0 : -1;
       });
       copy.classList.add('is-changing');
-      win.setTimeout(() => {
-        copy.textContent = audienceCopy[key] || audienceCopy.anyone;
+      win.clearTimeout(transitionTimer);
+      transitionTimer = win.setTimeout(() => {
+        copy.textContent = audienceCopy[language][key] || audienceCopy[language].anyone;
         copy.classList.remove('is-changing');
-      }, reduceMotion.matches ? 0 : 170);
+      }, immediate || reduceMotion.matches ? 0 : 170);
     };
 
     tabs.forEach((tab, index) => {
@@ -432,6 +444,10 @@
         tabs[next].focus();
         activate(tabs[next]);
       });
+    });
+    doc.addEventListener('portfolio-language-change', () => {
+      const selected = tabs.find((tab) => tab.getAttribute('aria-selected') === 'true') || tabs[0];
+      activate(selected, true);
     });
     activate(tabs.find((tab) => tab.getAttribute('aria-selected') === 'true') || tabs[0]);
   }
