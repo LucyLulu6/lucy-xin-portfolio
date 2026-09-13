@@ -1737,7 +1737,9 @@
   function initCaseStudyExperience() {
     const page = qs('.case-page');
     if (!page) return;
-    const currentPage = win.location.pathname.split('/').pop() || 'index.html';
+    const pathName = win.location.pathname.replace(/\/+$/, '');
+    const routeName = decodeURIComponent(pathName.split('/').pop() || 'index');
+    const currentPage = routeName.includes('.') ? routeName : `${routeName}.html`;
     const projects = {
       'geeellink.html': { title: 'Geeelink', subtitle: 'AI Video Production Workflow', image: 'images/lucy/case-studies/geeellink/hifi/storyboard.png' },
       'ourjourneyman.html': { title: 'OurJourneyMan', subtitle: 'Custom Commission Platform', image: 'images/lucy/case-studies/ourjourneyman/ourjourneyman-mockup.png', fit: 'contain' },
@@ -1777,9 +1779,10 @@
       nextSection.replaceWith(related, contact);
     }
     const caseMain = qs('.case-main', page);
-    if (caseMain) {
+    const currentShowcase = showcaseMarkup[currentPage];
+    if (caseMain && currentShowcase) {
       const stage = doc.createElement('div');
-      stage.innerHTML = showcaseMarkup[currentPage] || showcaseMarkup['ourjourneyman.html'];
+      stage.innerHTML = currentShowcase;
       caseMain.prepend(stage.firstElementChild);
     }
     if (caseMain && finePointer.matches && !reduceMotion.matches) {
@@ -2041,7 +2044,8 @@
     const page = qs('[data-gallery-category]');
     const grid = qs('[data-gallery-grid]', page || doc);
     if (!page || !grid) return;
-    const routeMatch = win.location.pathname.match(/projects-(web|app|print|sculpture|drawing)\.html$/);
+    const normalizedPath = win.location.pathname.replace(/\/+$/, '');
+    const routeMatch = normalizedPath.match(/projects-(web|app|print|sculpture|drawing)(?:\.html)?$/);
     const category = page.dataset.galleryCategory || routeMatch?.[1] || 'web';
     page.dataset.galleryCategory = category;
     const galleries = {
