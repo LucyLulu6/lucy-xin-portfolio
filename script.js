@@ -1597,6 +1597,13 @@
         const expanded = toggle.getAttribute('aria-expanded') === 'true';
         toggle.setAttribute('aria-label', current === 'zh' ? (expanded ? '关闭菜单' : '打开菜单') : (expanded ? 'Close menu' : 'Open menu'));
       });
+      const resumeHref = current === 'zh'
+        ? 'resume/Liu_Xin_Product_Experience_Designer_Resume_CN.pdf'
+        : 'resume/Xin_Liu_Resume_Product_Design.pdf';
+      qsa('a[href^="resume/"][href$=".pdf"]').forEach((link) => {
+        link.setAttribute('href', resumeHref);
+        link.setAttribute('aria-label', current === 'zh' ? '查看中文简历（PDF）' : 'View English resume (PDF)');
+      });
       const playgroundScroller = qs('[data-horizontal-sticky]');
       playgroundScroller?.setAttribute('aria-label', current === 'zh'
         ? 'AI 视觉实验。向下滚动或使用方向键浏览。'
